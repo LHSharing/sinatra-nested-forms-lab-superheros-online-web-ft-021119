@@ -2,7 +2,7 @@ class Team
   attr_accessor :name, :motto
   TEAM = []
 
-  def intitialize(params)
+  def intitialize
     @name = params[:name]
     @motto = params[:motto]
     TEAM << self
@@ -10,7 +10,7 @@ class Team
 
   def self.all
     TEAM
-end
+  end
 
   def self.clear
     TEAM.clear
