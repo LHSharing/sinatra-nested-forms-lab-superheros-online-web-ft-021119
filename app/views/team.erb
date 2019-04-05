@@ -1,3 +1,24 @@
 
+<form method="post" action="/teams">
+    Create a Team and Heroes!<br>
+    <br>
 
+    <h1>Super Teams</h1>
+        <div class="team">
+            <p>Team Name: <%= @team.name %></p>
+            <p>Team Motto: <%= @team.motto %></p>
+        </div><br>
 
+    <h1>Super Heroes</h1>
+
+    <% @members.each do |hero| %>
+        <div class="hero">
+            <p>Hero Name: <%= hero.name %></p>
+            <p>Hero Power: <%= hero.power %></p>
+            <p>Hero Biography: <%= hero.bio %></p><br>
+        </div><br>
+            <% end %>
+
+    <input id="submit" type="submit">
+
+</form>
